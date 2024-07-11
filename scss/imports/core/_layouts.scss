@@ -14,22 +14,13 @@ body {
     max-width: $max-width;
     -webkit-font-smoothing: antialiased;
     margin: auto;
-    @include text($fz-text, fmain, $lh-text, $text-cl, none);
-    background: $white-cl;
-    position: relative;
+    @include text($fs-body, $primary-font, 1.5, $text-color, none);
+    background: $background;
+    color: $on-background;
     @include custom-scrollbar();
-    .mainwrapper {
-        width: 100%;
-        margin: auto;
-        overflow: hidden;
-    }
-    @include desktop {
-        
-    }
-    @include tablet {
-        
-    }
-    @include mobile {
-        
-    }
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
 }

@@ -1,17 +1,41 @@
-.container {
-    // background-color: #333;
-    // display: flex;
-    // // height: 500px;
-    // h1 {
-    //     margin: auto;
-    //     font-size: 32px;
-    //     color: white;
-    // }
-    .col-12 {
-        text-align: center;
-        background-color: #ccc;
-        background-clip: content-box;
-        margin-top: 8px;
-        margin-bottom: 8px;
-    }
+#homepage {
+    position: relative;
+    background-color: $surface;
+    color: $on-surface;
+    padding: 20px 24px 48px;
+    overflow-y: overlay;
+    z-index: 1;
 }
+
+#homepage::after {
+    content: '';
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background-image: linear-gradient($bottom-overlay);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.banner {
+    position: relative;
+    height: 700;
+    border-radius: $radius-24;
+    overflow: hidden;
+}
+
+.banner-slider {
+    position: absolute;
+    top: 0;
+    left: 120%;
+    width: 100%;
+    height: 100%;
+    background-color: $banner-background;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity $transition-short;
+}
+
+

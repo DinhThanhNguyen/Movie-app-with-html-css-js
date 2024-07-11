@@ -1,0 +1,64 @@
+.title,
+.title-large,
+.heading {
+    font-weight: $weight-bold;
+    letter-spacing: 0.5px;
+}
+
+.title {
+    font-size: $fs-title;
+}
+
+.title-large {
+    font-size: $fs-title-lg;
+}
+
+.heading {
+    color: $white;
+    font-size: $fs-heading;
+    line-height: 1.2;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: fixed;
+    top: 96px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background: $background;
+    opacity: 0;
+    pointer-events: none;
+    @include transition($transition-short);
+    z-index: 3;
+}
+
+.overlay.active {
+    opacity: 0.5;
+    pointer-events: all;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.btn {
+    color: $white;
+    font-size: $fs-button;
+    font-weight: $weight-bold;
+    max-width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-block: 12px;
+    padding-inline: 20px 24px;
+    border-radius: $radius-8;
+    @include transition($transition-short);
+}
