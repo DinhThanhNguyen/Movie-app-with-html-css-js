@@ -22,7 +22,6 @@
 .img-cover {
     width: 100%;
     height: 100%;
-    object-fit: cover;
 }
 
 .overlay {
@@ -62,3 +61,13 @@
     border-radius: $radius-8;
     @include transition($transition-short);
 }
+
+.card-badge {
+    background-color: $banner-background;
+    color: $white;
+    font-size: $fs-label;
+    font-weight: $weight-bold;
+    padding-inline: 6px;
+    border-radius: $radius-4;
+}
+

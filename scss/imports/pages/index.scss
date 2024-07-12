@@ -21,12 +21,12 @@
 
 .banner {
     position: relative;
-    height: 700;
+    max-height: 700px;
     border-radius: $radius-24;
     overflow: hidden;
 }
 
-.banner-slider {
+.banner-slider .slider-item {
     position: absolute;
     top: 0;
     left: 120%;
@@ -38,4 +38,78 @@
     transition: opacity $transition-short;
 }
 
+.banner-slider .slider-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient($banner-overlay);
+}
 
+.banner-slider .slider-item.active {
+    left: 0;
+    opacity: 1;
+    visibility: visible;
+}
+
+.banner-content {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    color: $text-color;
+}
+
+.banner .heading {
+    @include overtext(3);
+    margin-block-end: 16px;
+}
+
+.meta-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+}
+
+.banner .gerne {
+    margin-block: 12px;
+}
+
+.banner .banner-text {
+    @include overtext(3);
+    margin-block-end: 24px;
+}
+
+.banner .btn {
+    background-color: $primary;
+    opacity: 0.8;
+    @include transition($transition-short);
+}
+
+.banner .btn:is(:hover, :focus-visible) {
+    opacity: 1;
+    box-shadow: $shadow-2;
+}
+
+.banner-control {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 0;
+    border-radius: $radius-16 0 0 $radius-16;
+    user-select: none;
+    padding: 4px 0 4px 4px;
+    overflow-x: auto;
+}
+
+// .slider-control::-webkit-scrollbar {
+//     display: none;
+// }
+
+// .control-inner {
+//     display: flex;
+//     gap: 12px;
+// }
