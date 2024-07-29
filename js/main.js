@@ -12,4 +12,3 @@ const searchTogglers = document.querySelectorAll('[search-toggler]');
 addEventOnElements(searchTogglers, "click", function() {
     searchBox.classList.toggle('active')
 })
-

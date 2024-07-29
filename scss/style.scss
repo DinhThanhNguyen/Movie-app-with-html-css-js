@@ -5,7 +5,6 @@
 @import "imports/core/layouts";
 @import "imports/core/elements";
 @import "imports/core/components";
-@import "imports/core/bootstrap_mini";
 @import "imports/core/libs";
 
 @import "imports/core/loading";
@@ -17,3 +16,5 @@
 
 /* Pages*/
 @import "imports/pages/index";
+@import "imports/pages/detail";
+@import "imports/pages/movie-list";
