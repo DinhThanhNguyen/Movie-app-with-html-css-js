@@ -96,11 +96,8 @@
     border-radius: $radius-16 0 0 $radius-16;
     user-select: none;
     padding: 4px 0 4px 4px;
-    overflow-x: auto;
-}
-
-.slider-control::-webkit-scrollbar {
-    display: none;
+    overflow-x: scroll;
+    @include custom-scrollbar;
 }
 
 .control-inner {

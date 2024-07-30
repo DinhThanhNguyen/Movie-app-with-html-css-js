@@ -17,10 +17,20 @@ body {
     @include text($fs-body, $primary-font, 1.5, $text-color, none);
     background: $background;
     color: $on-background;
-    @include custom-scrollbar();
 }
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
+}
+
+main, nav {
+    &::-webkit-scrollbar {
+		width: 8px;
+		height: 8px;
+	}
+	&::-webkit-scrollbar-thumb {
+		background: $banner-background;
+		border-radius: $radius-8;
+	}
 }

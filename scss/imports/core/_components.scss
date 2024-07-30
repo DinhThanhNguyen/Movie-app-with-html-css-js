@@ -99,28 +99,17 @@
     overflow: hidden;
 }
 
-.title-wapper {
+.title-wrapper {
     margin-block-start: 24px;
     margin-block-end: 16px;
 }
 
 .slider-list {
     margin-left: -20px;
-    overflow-x: scroll;
+    overflow-x: overlay;
     padding-block-end: 16px;
     margin-block-end: -16px;
-}
-
-.slider-list::-webkit-scrollbar-thumb {
-    background-color: transparent;
-}
-
-.slider-list:is(:hover, :focus-visible)::-webkit-scrollbar-thumb {
-    background-color: $banner-background;
-}
-
-.slider-list::-webkit-scrollbar-button {
-    width: 20px;
+    @include custom-scrollbar();
 }
 
 .slider-list .slider-inner {
@@ -183,4 +172,8 @@
     color: $primary-variant;
     font-weight: $weight-bold;
     margin-block-end: 8px;
+}
+
+.search-modal.active ~ body {
+    overflow: hidden;
 }

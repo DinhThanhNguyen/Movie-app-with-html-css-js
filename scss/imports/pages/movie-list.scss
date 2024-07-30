@@ -26,6 +26,7 @@
     background-color: $primary-variant;
     margin-inline: auto;
     margin-block: 36px 60px;
+    cursor: pointer;
 }
 
 .load-more:is(:hover, :focus-visible) {

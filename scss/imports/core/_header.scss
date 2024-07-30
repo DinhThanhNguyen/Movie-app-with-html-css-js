@@ -59,12 +59,12 @@
 	display: flex;
 }
 
-.search-wapper {
+.search-wrapper {
 	position: relative;
 	flex-grow: 1;
 }
 
-.search-wapper::before {
+.search-wrapper::before {
 	position: absolute;
 	top: 14px;
 	right: 12px;
@@ -78,7 +78,7 @@
 	display: none;
 }
 
-.search-wapper.searching::before {
+.search-wrapper.searching::before {
 	display: block;
 }
 
@@ -114,7 +114,7 @@
 	padding-inline-start: 16px;
 }
 
-.search-wapper .leading-icon {
+.search-wrapper .leading-icon {
 	position: absolute;
 	top: 50%;
 	@include transform(translateY(-50%));
@@ -123,6 +123,6 @@
 	@include transition($transition-short);
 }
 
-.search-wapper:focus-within .leading-icon {
+.search-wrapper:focus-within .leading-icon {
 	opacity: 0;
 }

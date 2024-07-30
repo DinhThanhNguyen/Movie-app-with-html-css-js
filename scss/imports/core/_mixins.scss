@@ -180,7 +180,13 @@
 		height: 8px;
 	}
 	&::-webkit-scrollbar-thumb {
-		background: $banner-background;
+		background: transparent;
 		border-radius: $radius-8;
 	}
+
+	&:hover, &:focus-visible {
+		&::-webkit-scrollbar-thumb {
+		  background-color: $banner-background;
+		}
+	  }
 }
